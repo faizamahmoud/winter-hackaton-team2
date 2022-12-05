@@ -8,6 +8,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Router>
     <Routes>
+      
       <React.StrictMode>
         <Route path="/" element={<App />} />
         <Route path="*" element={<NotFound />} />

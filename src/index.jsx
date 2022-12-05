@@ -9,7 +9,8 @@ root.render(
   <Router>
     <Routes>
       <React.StrictMode>
-        <App />
+        <Route path="/" element={<App />} />
+        <Route path="*" element={<NotFound />} />
       </React.StrictMode>
     </Routes>
   </Router>

@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<AnimalShelters />} />
         {/* <Route path="*" element={<NotFound />} /> */}
-      {/* </Routes> */}
+      </Routes>
     </div>
   );
 }

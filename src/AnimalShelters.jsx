@@ -2,11 +2,8 @@ import RescueGroups from './apis/RescueGroups'
 import { useState, useEffect } from 'react'
 
 function AnimalShelters() {
-  const TOKEN = process.env.RESCUE_GROUPS_API_KEY
 
   const [rescueGroupData, setRescueGroupData] = useState()
-
-
   
   useEffect(() => {
     async function fetchData() {

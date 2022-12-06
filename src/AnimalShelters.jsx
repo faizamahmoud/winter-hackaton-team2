@@ -4,8 +4,6 @@ import { useGlobalContext } from './context/shelterContext'
 
 function AnimalShelters() {
 
-const {rescueGroupData} = useGlobalContext();
-
 if(!rescueGroupData) {
   return (
     <h4>Loading</h4>

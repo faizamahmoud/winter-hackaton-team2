@@ -1,18 +1,16 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AnimalShelters from './AnimalShelters';
-
+import Map from './apis/Map';
 
 function App() {
   return (
-    <div className="App">
-    
-      <AnimalShelters />
+    <div className="App">   
+      <Map />      
 
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/api_test"/>
+        <Route path="/" element={<AnimalShelters />} />
         {/* <Route path="*" element={<NotFound />} /> */}
-      </Routes>
-
+      {/* </Routes> */}
     </div>
   );
 }

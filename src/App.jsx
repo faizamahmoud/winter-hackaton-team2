@@ -1,7 +1,18 @@
+import AnimalShelters from './AnimalShelters';
+
+
 function App() {
   return (
     <div className="App">
-      <h1>Hello!</h1>
+    
+      <AnimalShelters />
+
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/api_test"/>
+        {/* <Route path="*" element={<NotFound />} /> */}
+      </Routes>
+
     </div>
   );
 }

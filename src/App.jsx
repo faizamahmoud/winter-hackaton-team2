@@ -4,10 +4,9 @@ import Map from './apis/Map';
 
 function App() {
   return (
-    <div className="App">
-    
-      <Map />
-      
+    <div className="App">   
+      <Map />      
+
       <Routes>
         <Route path="/" element={<AnimalShelters />} />
         {/* <Route path="*" element={<NotFound />} /> */}

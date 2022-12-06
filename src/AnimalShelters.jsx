@@ -1,39 +1,8 @@
 import RescueGroups from './apis/RescueGroups'
 import { useState, useEffect } from 'react'
+import { useGlobalContext } from './context/shelterContext'
 
 function AnimalShelters() {
-
-  const [rescueGroupData, setRescueGroupData] = useState()
-  
-  useEffect(() => {
-    async function fetchData() {
-      try {
-       fetch('https://api.rescuegroups.org/v5/public/orgs/search', {
-          method: 'POST',
-          headers: {
-            'Content-Type':'application/vnd.api+json',
-            'Authorization': 'GPKNSuYF'
-          },
-          body: JSON.stringify({
-            data: {
-              'filterRadius':{
-                'postalcode': 90210,
-                'miles': 25
-              }
-            }
-          })
-        })
-        .then(response => response.json())
-        .then(json => setRescueGroupData(json.data)) 
-        .then(() => console.log(rescueGroupData)) 
-      }
-       catch (error) {
-        console.log(error)
-      }
-    }
-    fetchData()
-
-  }, [])
 
 if(!rescueGroupData) {
   return (

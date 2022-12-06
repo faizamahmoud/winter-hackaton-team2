@@ -1,18 +1,13 @@
 import AnimalShelters from './AnimalShelters';
-
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-    
-      <AnimalShelters />
-
+    <div className="App">    
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/api_test"/>
+        <Route path="/" element={<AnimalShelters />} />
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
-
     </div>
   );
 }

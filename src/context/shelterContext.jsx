@@ -49,7 +49,7 @@ const [coords, setCoords] = useState([])
   useEffect(()=> {
     if(rescueGroupData) {      
       setCoords([]) 
-      rescueGroupData.map((item) => {setCoords((prevState) => [...prevState, {'lat': item.attributes.lat, 'lon': item.attributes.lon}])})
+      rescueGroupData.map((item) => {setCoords((prevState) => [...prevState, {'name': item.attributes.name, 'lat': item.attributes.lat, 'lon': item.attributes.lon}])})
     }
   }, [rescueGroupData])
 

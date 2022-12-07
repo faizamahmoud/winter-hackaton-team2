@@ -1,0 +1,3 @@
+or use MapboxGL flyTo method
+
+map.flyTo({center:[lng, lat]});

@@ -1,3 +1,4 @@
+
 import React, {useRef, useEffect, useState} from 'react';
 // import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 import mapboxgl from 'mapbox-gl';
@@ -16,7 +17,7 @@ function Map() {
     const map = useRef(null);
     // const [lng, setLng] = useState(-122.26);
     // const [lat, setLat] = useState(37.79);
-    const [zoom, setZoom] = useState(11);
+    const [zoom, setZoom] = useState(5);
 
     useEffect(() => {
             // from Mapbox.com

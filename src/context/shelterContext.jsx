@@ -15,9 +15,9 @@ const maps = (lat, lan) => {
 }
 
 const [rescueGroupData, setRescueGroupData] = useState()
-  
-  useEffect(() => {
-    async function fetchData() {
+
+useEffect(() => {
+     async function fetchData() {
       try {
        fetch('https://api.rescuegroups.org/v5/public/orgs/search', {
           method: 'POST',

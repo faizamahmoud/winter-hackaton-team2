@@ -9,15 +9,20 @@ const ShelterContext = createContext()
 export const ShelterProvider = ({children}) => {
 
 const [item, setItems] = useState([]);
-
-const maps = (lat, lan) => {
-    setItems((prevState) => [...prevState, {lat, lan}]);
-}
-
 const [rescueGroupData, setRescueGroupData] = useState()
-  
+
+// function flyThis () {map.flyTo({
+//   center: [(Math.random() - 0.5) * 360, (Math.random() - 0.5) * 100],
+//   essential: true // this animation is considered essential with respect to prefers-reduced-motion
+//   })};
+
+const [postalCode, setPostalCode] = useState()
+const [distance, setDistance] = useState('25')
+const [coords, setCoords] = useState([])
+
   useEffect(() => {
     async function fetchData() {
+
       try {
        fetch('https://api.rescuegroups.org/v5/public/orgs/search', {
           method: 'POST',
@@ -27,27 +32,41 @@ const [rescueGroupData, setRescueGroupData] = useState()
           },
           body: JSON.stringify({
             data: {
-              'filterRadius':{
-                'postalcode': 90210,
-                'miles': 25
+              'filterRadius':{                
+                'postalcode': `${postalCode}`,
+                'miles': `${distance}`               
               }
             }
-          })
+          }),
         })
         .then(response => response.json())
-        .then(json => setRescueGroupData(json.data)) 
-        .then(() => console.log(rescueGroupData)) 
+        .then(json => setRescueGroupData(json.data))
       }
        catch (error) {
         console.log(error)
       }
     }
-    fetchData()
+    if(postalCode) {
+      fetchData()          
+    }
+  }, [postalCode, distance])
 
-  }, [])
+
+  // This useEffect will take the lat and lon from the rescueGroupData, if it exists, and set the coords array to objects with the lat and lon of each shelter.
+  // This info will be used with the map, to provide markers for the user
+  useEffect(()=> {
+    if(rescueGroupData) {      
+      setCoords([]) 
+      rescueGroupData.map((item) => {setCoords((prevState) => [...prevState, {'name': item.attributes.name, 'lat': item.attributes.lat, 'lon': item.attributes.lon}])})
+    }
+  }, [rescueGroupData])
+
+  console.log(rescueGroupData)
+  console.log(coords)
+
 
     return(
-        <ShelterContext.Provider value={{item:1, rescueGroupData}}>
+        <ShelterContext.Provider value={{item:1, rescueGroupData, postalCode, setPostalCode, distance, setDistance, coords}}>
             {children}
         </ShelterContext.Provider>
     )
@@ -58,6 +77,3 @@ export const useGlobalContext = () => {
 }
 
 export default ShelterContext
-
-
-

@@ -4,11 +4,11 @@ import { useGlobalContext } from './context/shelterContext'
 
 function AnimalShelters() {
 
-const {rescueGroupData} = useGlobalContext()
+const {rescueGroupData, flyThis} = useGlobalContext()
 
 if(!rescueGroupData) {
   return (
-    <h4>Loading</h4>
+    <h4>Please enter a location to search.</h4>
   )
 } else if (rescueGroupData.length < 1) {
   return (
@@ -21,14 +21,18 @@ if(!rescueGroupData) {
         <div>
           {rescueGroupData.map((singleGroup) => {
             return (
-              <div>
+              <div key={singleGroup.attributes.id}>
                 <h4>{singleGroup.attributes.name}</h4>
                 <p>City: {singleGroup.attributes.citystate}</p> 
                 <p>Distance (from 90210 hardcoded): {singleGroup.attributes.distance} miles</p> 
                 <p>Email: {singleGroup.attributes.email}</p> 
                 <p>Phone: <a href={singleGroup.attributes.url} target="_blank">{singleGroup.attributes.url}</a></p> 
                 <p>Website: {singleGroup.attributes.phone}</p> 
+
                 <p>Services: {singleGroup.attributes.phone}</p> 
+                <button>{singleGroup.attributes.coordinates}</button>
+                <button >FLY</button>
+
               </div>
             )
           })}  

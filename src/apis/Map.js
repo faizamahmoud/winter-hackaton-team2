@@ -8,6 +8,8 @@ mapboxgl.accessToken=T
 // 'pk.eyJ1IjoibXZya2xqYW4iLCJhIjoiY2w1bXYzdjIxMDE3cjNjbXR5ejl2bWFveSJ9.KD9v7tW8kslwNGmg-fOjcQ'
 function Map() {
 
+  const {coords} = useGlobalContext()
+
     const mapContainer = useRef(null);
     const map = useRef(null);
     const [lng, setLng] = useState(-122.26);

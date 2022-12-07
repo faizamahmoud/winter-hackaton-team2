@@ -4,7 +4,7 @@ import { useGlobalContext } from './context/shelterContext'
 
 function AnimalShelters() {
 
-const {rescueGroupData} = useGlobalContext()
+const {rescueGroupData, flyThis} = useGlobalContext()
 
 if(!rescueGroupData) {
   return (
@@ -30,6 +30,7 @@ if(!rescueGroupData) {
                 <p>Website: {singleGroup.attributes.phone}</p> 
                 <p>Services: {singleGroup.attributes.phone}</p> 
                 <button>{singleGroup.attributes.coordinates}</button>
+                <button >FLY</button>
               </div>
             )
           })}  

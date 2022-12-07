@@ -16,6 +16,12 @@ const maps = (lat, lan) => {
 
 const [rescueGroupData, setRescueGroupData] = useState()
 
+// function flyThis () {map.flyTo({
+//   center: [(Math.random() - 0.5) * 360, (Math.random() - 0.5) * 100],
+//   essential: true // this animation is considered essential with respect to prefers-reduced-motion
+//   })};
+
+
 useEffect(() => {
      async function fetchData() {
       try {
@@ -43,6 +49,8 @@ useEffect(() => {
       }
     }
     fetchData()
+
+
 
   }, [])
 

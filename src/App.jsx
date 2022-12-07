@@ -6,7 +6,7 @@ import Search from './components/Search';
 function App() {
   return (
     <div className="App">   
-      <Search />      
+  
       <Routes>
         <Route path="/" element={<AnimalShelters />} />
         <Route path="/searchResults" element={<SearchResult />} />

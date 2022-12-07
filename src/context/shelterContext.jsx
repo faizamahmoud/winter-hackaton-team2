@@ -9,12 +9,12 @@ const ShelterContext = createContext()
 export const ShelterProvider = ({children}) => {
 
 const [item, setItems] = useState([]);
+const [rescueGroupData, setRescueGroupData] = useState()
+const [postalCode, setPostalCode] = useState()
+const [distance, setDistance] = useState('25')
 
 const maps = (lat, lan) => {
-    setItems((prevState) => [...prevState, {lat, lan}]);
-}
-
-const [rescueGroupData, setRescueGroupData] = useState()
+    setItems((prevState) => [...prevState, {lat, lan}]);}
   
   useEffect(() => {
     async function fetchData() {
@@ -27,27 +27,28 @@ const [rescueGroupData, setRescueGroupData] = useState()
           },
           body: JSON.stringify({
             data: {
-              'filterRadius':{
-                'postalcode': 90210,
-                'miles': 25
+              'filterRadius':{                
+                'postalcode': `${postalCode}`,
+                'miles': `${distance}`               
               }
             }
           })
         })
         .then(response => response.json())
         .then(json => setRescueGroupData(json.data)) 
-        .then(() => console.log(rescueGroupData)) 
       }
        catch (error) {
         console.log(error)
       }
     }
-    fetchData()
+    if(postalCode) {
+      fetchData()    
+    }
+  }, [postalCode, distance])
 
-  }, [])
-
+  console.log(rescueGroupData)
     return(
-        <ShelterContext.Provider value={{item:1, rescueGroupData}}>
+        <ShelterContext.Provider value={{item:1, rescueGroupData, postalCode, setPostalCode, distance, setDistance}}>
             {children}
         </ShelterContext.Provider>
     )

@@ -12,10 +12,8 @@ const [item, setItems] = useState([]);
 const [rescueGroupData, setRescueGroupData] = useState()
 const [postalCode, setPostalCode] = useState()
 const [distance, setDistance] = useState('25')
-
-const maps = (lat, lan) => {
-    setItems((prevState) => [...prevState, {lat, lan}]);}
-  
+const [coords, setCoords] = useState([])
+ 
   useEffect(() => {
     async function fetchData() {
       try {
@@ -32,23 +30,34 @@ const maps = (lat, lan) => {
                 'miles': `${distance}`               
               }
             }
-          })
+          }),
         })
         .then(response => response.json())
-        .then(json => setRescueGroupData(json.data)) 
+        .then(json => setRescueGroupData(json.data))
       }
        catch (error) {
         console.log(error)
       }
     }
     if(postalCode) {
-      fetchData()    
+      fetchData()          
     }
   }, [postalCode, distance])
 
+  // This useEffect will take the lat and lon from the rescueGroupData, if it exists, and set the coords array to objects with the lat and lon of each shelter.
+  // This info will be used with the map, to provide markers for the user
+  useEffect(()=> {
+    if(rescueGroupData) {      
+      setCoords([]) 
+      rescueGroupData.map((item) => {setCoords((prevState) => [...prevState, {'lat': item.attributes.lat, 'lon': item.attributes.lon}])})
+    }
+  }, [rescueGroupData])
+
   console.log(rescueGroupData)
+  console.log(coords)
+
     return(
-        <ShelterContext.Provider value={{item:1, rescueGroupData, postalCode, setPostalCode, distance, setDistance}}>
+        <ShelterContext.Provider value={{item:1, rescueGroupData, postalCode, setPostalCode, distance, setDistance, coords}}>
             {children}
         </ShelterContext.Provider>
     )
@@ -59,6 +68,3 @@ export const useGlobalContext = () => {
 }
 
 export default ShelterContext
-
-
-

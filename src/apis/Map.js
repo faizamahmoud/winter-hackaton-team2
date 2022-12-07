@@ -1,11 +1,13 @@
 import React, {useRef, useEffect, useState} from 'react';
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
+import { useGlobalContext } from '../context/shelterContext';
 
 const T = process.env.REACT_APP_TOKEN
 mapboxgl.accessToken=T
 
 // 'pk.eyJ1IjoibXZya2xqYW4iLCJhIjoiY2w1bXYzdjIxMDE3cjNjbXR5ejl2bWFveSJ9.KD9v7tW8kslwNGmg-fOjcQ'
 function Map() {
+
     const mapContainer = useRef(null);
     const map = useRef(null);
     const [lng, setLng] = useState(-122.26);

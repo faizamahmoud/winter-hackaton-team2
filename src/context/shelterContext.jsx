@@ -57,7 +57,7 @@ export const ShelterProvider = ({children}) => {
   useEffect(()=> {
     if(rescueGroupData) {      
       setCoords([]) 
-      rescueGroupData.map((item) => {setCoords((prevState) => [...prevState, {"name": item.attributes.name, "lat": item.attributes.lat, "lng": item.attributes.lon}])})
+      rescueGroupData.map((item) => {setCoords((prevState) => [...prevState, {"name": item.attributes.name, "lat": item.attributes.lat, "lng": item.attributes.lon,"url":item.attributes.url}])})
     }
   }, [rescueGroupData])
 

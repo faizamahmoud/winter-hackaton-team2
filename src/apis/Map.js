@@ -1,9 +1,8 @@
 import React, {useRef, useEffect, useState} from 'react';
 // import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 import mapboxgl from 'mapbox-gl';
-import markers from './marker.json'
 import { useGlobalContext } from '../context/shelterContext'
-import { makeArray } from 'jquery';
+
 
 // Mapbox key
 const T = process.env.REACT_APP_TOKEN
@@ -29,17 +28,9 @@ function Map() {
             });
          
             // from Mapbox.com
-        // markers.map((marker) => new mapboxgl.Marker()
-        //         .setLngLat(marker)
-        //         .setPopup(new mapboxgl.Popup({offset:50})
-        //         // looking to populate shelter name in line below
-        //         .setHTML("<h1>Hi Team 'This should work'</h1>"))
-        //         .addTo(map));
-        
-        
+      
         coords.map((marker) => {
-            
-                new mapboxgl.Marker()
+               new mapboxgl.Marker()
                 .setLngLat(marker)
                 .setPopup(new mapboxgl.Popup({offset:50})
                 // looking to populate shelter name in line below

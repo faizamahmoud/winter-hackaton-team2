@@ -8,17 +8,17 @@ const ShelterContext = createContext()
 
 export const ShelterProvider = ({children}) => {
 
-const [item, setItems] = useState([]);
-const [rescueGroupData, setRescueGroupData] = useState()
+  const [item, setItems] = useState([]);
+  const [rescueGroupData, setRescueGroupData] = useState()
+  const [postalCode, setPostalCode] = useState()
+  const [distance, setDistance] = useState('25')
+  const [coords, setCoords] = useState([])
 
-// function flyThis () {map.flyTo({
-//   center: [(Math.random() - 0.5) * 360, (Math.random() - 0.5) * 100],
-//   essential: true // this animation is considered essential with respect to prefers-reduced-motion
-//   })};
+  // function flyThis () {map.flyTo({
+  //   center: [(Math.random() - 0.5) * 360, (Math.random() - 0.5) * 100],
+  //   essential: true // this animation is considered essential with respect to prefers-reduced-motion
+  //   })};
 
-const [postalCode, setPostalCode] = useState()
-const [distance, setDistance] = useState('25')
-const [coords, setCoords] = useState([])
 
   useEffect(() => {
     async function fetchData() {
@@ -57,7 +57,7 @@ const [coords, setCoords] = useState([])
   useEffect(()=> {
     if(rescueGroupData) {      
       setCoords([]) 
-      rescueGroupData.map((item) => {setCoords((prevState) => [...prevState, {'name': item.attributes.name, 'lat': item.attributes.lat, 'lon': item.attributes.lon}])})
+      rescueGroupData.map((item) => {setCoords((prevState) => [...prevState, {"name": item.attributes.name, "lat": item.attributes.lat, "lng": item.attributes.lon}])})
     }
   }, [rescueGroupData])
 

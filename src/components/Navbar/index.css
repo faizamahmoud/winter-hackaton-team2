@@ -1,20 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
 .navbar {
-    /* display: flex; */
-    /* justify-content: space-between; */
-    /* margin-top: 1rem; */
+
     padding: 1rem;
     background-color: #0AA6A6;
     position: fixed;
-    bottom: 0;
+    bottom: 10;
     left: 0;
     width: 100%;
-    height:70px;
+    height: 70px;
 }
 
 .nav-title {
-   font-size: 30px;
-   font-weight: bold;
-   margin-bottom: -100px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: -100px;
 }
 
 ul {
@@ -25,7 +27,8 @@ ul {
 
 
 }
-ul > li {
+
+ul>li {
     display: inline-block;
     /* You can also add some margins here to make it look prettier */
 }
@@ -38,24 +41,31 @@ li a {
     text-decoration: none;
 }
 
-.left-nav{
+.left-nav {
     margin-right: auto;
 }
 
 .btn-donate {
-box-shadow: 0 ;
-background: #F28227;
-border-radius: 10px;
-height: 40px;
-width: 140px;
-border-radius: 10px;
-/* padding:-10px;
-margin-right:10rem;
-margin-bottom: 1rem; */
-
+    
+    background: #F28227;
+    border-radius: 10px;
+    height: 40px;
+    width: 140px;
+    border-radius: 10px;
+    font-weight: bold;
 }
 
 
- #donate-icon {
-padding:10px;
- }
+
+#donate-icon {
+    padding: 1px;
+    /* margin-right: 2px; */
+}
+
+.nav-links {
+    /* position: relative; */
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    /* align-items: center; */
+    /* justify-content: space-between; */
+}

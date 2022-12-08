@@ -69,7 +69,7 @@ function Map() {
 
   return (
     <div>
-        <h1>Name of Site</h1>
+        {/* <h1>Name of Site</h1> */}
         {/* Gives the map with the inital coordinates */}
         <div ref={mapContainer} className="map-container" />
 

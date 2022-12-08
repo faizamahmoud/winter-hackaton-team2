@@ -44,30 +44,11 @@ if(!rescueGroupData) {
                   } 
                   <ListGroup.Item className="sr-card-address" >{singleGroup.attributes.street}, {singleGroup.attributes.citystate}</ListGroup.Item>
                 </ListGroup>
-              </Card>
-          )})}
-          {/* {rescueGroupData.map((singleGroup) => {
-            return (
-              <div key={singleGroup.attributes.id}>
-                <h4>{singleGroup.attributes.name}</h4>
-                <p>City: {singleGroup.attributes.citystate}</p> 
-                <p>Distance (from 90210 hardcoded): {singleGroup.attributes.distance} miles</p> 
-                <p>Email: {singleGroup.attributes.email}</p> 
-                <p>Phone: {singleGroup.attributes.phone}</p> 
-                <p>Website:<a href={singleGroup.attributes.url} target="_blank">{singleGroup.attributes.url}</a> </p>
-
-                <p>Services: {singleGroup.attributes.phone}</p> 
-
                 <Link to={`/show/${index}`}>
                   <div>Change ME!!</div>
                 </Link>
-
-                
-                <button >FLY</button>
-
-              </div>
-            )
-          })}   */}
+              </Card>
+          )})}
         </div>
     )
   } 

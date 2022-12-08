@@ -16,7 +16,7 @@ function App() {
       {/* <Map />       */}
       <Search />      
       <Routes>
-        <Route path="/Home" element={<LandingPage />} />
+        <Route path="/" element={<LandingPage />} />
         <Route path="/searchResults" element={<SearchResult />} /> 
         <Route path="/show/:id" element={<ShowPage />} />
 

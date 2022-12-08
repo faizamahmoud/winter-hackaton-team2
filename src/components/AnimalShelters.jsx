@@ -1,6 +1,8 @@
 import RescueGroups from '../apis/RescueGroups'
 import { useState, useEffect } from 'react'
 import { useGlobalContext } from '../context/shelterContext'
+import {Link} from 'react-router-dom'
+
 
 function AnimalShelters() {
 
@@ -19,18 +21,23 @@ if(!rescueGroupData) {
       <>
         <div>Animal Shelter Info</div>
         <div>
-          {rescueGroupData.map((singleGroup) => {
+          {rescueGroupData.map((singleGroup,index) => {
             return (
               <div key={singleGroup.attributes.id}>
                 <h4>{singleGroup.attributes.name}</h4>
                 <p>City: {singleGroup.attributes.citystate}</p> 
                 <p>Distance (from 90210 hardcoded): {singleGroup.attributes.distance} miles</p> 
                 <p>Email: {singleGroup.attributes.email}</p> 
-                <p>Phone: <a href={singleGroup.attributes.url} target="_blank">{singleGroup.attributes.url}</a></p> 
-                <p>Website: {singleGroup.attributes.phone}</p> 
+                <p>Phone: {singleGroup.attributes.phone}</p> 
+                <p>Website:<a href={singleGroup.attributes.url} target="_blank">{singleGroup.attributes.url}</a> </p>
 
                 <p>Services: {singleGroup.attributes.phone}</p> 
-                <button>{singleGroup.attributes.coordinates}</button>
+
+                <Link to={`/show/${index}`}>
+                  <div>Change ME!!</div>
+                </Link>
+
+                
                 <button >FLY</button>
 
               </div>

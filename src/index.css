@@ -1,8 +1,18 @@
 .map-container {
+  
     height: 400px;
+    align-items: right;
+    width: 500px;
+    
+  }
+
+  .searchresult{
+    display: flex;
+    flex-direction: row;
+
   }
   
-  
+/*   
   .sidebar {
     background-color: rgba(35, 55, 75, 0.9);
     color: #fff;
@@ -14,4 +24,4 @@
     left: 0;
     margin: 12px;
     border-radius: 4px;
-    }
+    } */

@@ -4,11 +4,11 @@ import AnimalShelters from "../components/AnimalShelters";
 
 const SearchResult = () => {
     return (
-        <div>
+        <div className="container">
             {/* <Header /> */}
             <Search />
-            <Map />
             <AnimalShelters />
+            <Map />
             {/* <Footer /> */}
 
         </div>

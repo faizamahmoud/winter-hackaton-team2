@@ -11,23 +11,23 @@ function Footer() {
 
         <div className="footer">
             <div className='footer-text d-flex space-between'>
-            <div className='footer-icons'>
-                <ul>
-                    <li><Link to="#"><FaFacebook/></Link></li>
-                    <li><Link to="#"><FaInstagram /></Link></li>
-                    <li><Link to="#"><FaTwitter/></Link></li>
-                </ul>
+                <div className='footer-icons'>
+                    <ul classname='footer-menu'>
+                        <li><Link to="#"><FaFacebook /></Link></li>
+                        <li><Link to="#"><FaInstagram /></Link></li>
+                        <li><Link to="#"><FaTwitter /></Link></li>
+                    </ul>
 
-            </div>
-            <div className='footer-nav'>
-                <ul>
-                    <li><Link to="#Volunteer">VOLUNTEER</Link></li>
-                    <li><Link to="#Locations">LOCATIONS</Link></li>
-                    <li><Link to="#Contact">CONTACT US</Link></li>
+                </div>
+                <div className='footer-nav'>
+                    <ul classname='footer-menu'>
+                        <li><Link to="#Volunteer">VOLUNTEER</Link></li>
+                        <li><Link to="#Locations">LOCATIONS</Link></li>
+                        <li><Link to="#Contact">CONTACT US</Link></li>
 
-                </ul>
-            </div>
-            <div className='copywrite-text'>@ Copywrite 2022. All Rights Reserved. Powered by GA Team 2</div>
+                    </ul>
+                </div>
+                <div className='copywrite-text'>@ Copywrite 2022. All Rights Reserved. Powered by GA Team 2</div>
             </div>
         </div>
 
@@ -37,8 +37,3 @@ function Footer() {
 export default Footer;
 
 
-
-
-// Notes
-//! footer-nav links correct
-//*npm install react-icons --save

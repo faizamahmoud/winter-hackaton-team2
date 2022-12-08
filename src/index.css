@@ -2,7 +2,9 @@
 .App {
   overflow: scroll;
   height:800px;
+  background-color:#DCDADA; 
 }
+
 
 .document-margins {
   margin: 25px 50px 75px;

@@ -46,3 +46,13 @@ li a {
     padding: 16px;
   
  }
+
+
+@media (max-width:600px) {
+  .footer-menu ul{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  }
+  

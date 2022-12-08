@@ -10,7 +10,7 @@ export const ShelterProvider = ({children}) => {
 
   const [item, setItems] = useState([]);
   const [rescueGroupData, setRescueGroupData] = useState()
-  const [postalCode, setPostalCode] = useState()
+  const [postalCode, setPostalCode] = useState('')
   const [distance, setDistance] = useState('25')
   const [coords, setCoords] = useState([])
 
@@ -25,7 +25,6 @@ export const ShelterProvider = ({children}) => {
 
   useEffect(() => {
     async function fetchData() {
-
       try {
        fetch('https://api.rescuegroups.org/v5/public/orgs/search', {
           method: 'POST',
@@ -49,11 +48,10 @@ export const ShelterProvider = ({children}) => {
         console.log(error)
       }
     }
-    if(postalCode) {
+    if(postalCode.length === 5) {
       fetchData()          
     }
   }, [postalCode, distance])
-
 
   // This useEffect will take the lat and lon from the rescueGroupData, if it exists, and set the coords array to objects with the lat and lon of each shelter.
   // This info will be used with the map, to provide markers for the user
@@ -63,9 +61,6 @@ export const ShelterProvider = ({children}) => {
       rescueGroupData.map((item) => {setCoords((prevState) => [...prevState, {"name": item.attributes.name, "lat": item.attributes.lat, "lng": item.attributes.lon,"url":item.attributes.url}])})
     }
   }, [rescueGroupData])
-
-  console.log(rescueGroupData)
-  console.log(coords)
 
 
     return(

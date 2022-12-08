@@ -20,9 +20,7 @@ function App() {
         <Route path="/show/:id" element={<ShowPage />} />
         <Route path="/form" element={<Form />} />
         <Route path="*" element={<NotFound />} />
-
-      </Routes>
-      
+      </Routes>      
       <Footer />
     </div>
   );

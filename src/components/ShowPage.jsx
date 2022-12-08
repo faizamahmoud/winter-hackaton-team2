@@ -24,8 +24,8 @@ function ShowPage() {
     <>
  
     <SearchBar2 />
-    <div className="d-flex flex-row bd-highlight mb-3">
-        <Card className="mt-3 ms-5" style={{ width: '30rem' }}>
+    <div className="d-flex flex-row bd-highlight mb-3 col-12">
+        <Card className="mt-3 ms-5 col-4" style={{ width: '30rem' }}>
         {/* <Card.Header></Card.Header> */}
         <ListGroup variant="flush">
             {/* <h2><ListGroup.Item className='shelter-name'>{theShelter.name}</ListGroup.Item></h2> */}
@@ -45,8 +45,8 @@ function ShowPage() {
             </Link>
         </ListGroup>
         </Card>
-
-        <Carousel className="position-absolute top-50 start-50 translate-middle">
+        <img src={image2} alt="smiling dog" className='mt-5 m-5 col-4'/>
+        {/* <Carousel className="position-absolute top-50 start-50 translate-middle">
           <Carousel.Item >
             <img
               className="d-block w-100"
@@ -82,8 +82,8 @@ function ShowPage() {
               <p></p>
             </Carousel.Caption>
           </Carousel.Item>
-        </Carousel>
-      </div>
+        </Carousel>*/}
+      </div> 
       </>
   )
 }

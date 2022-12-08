@@ -35,14 +35,14 @@ li a {
 
 
   .footer-icons{
-    margin-left: 500px;
+    margin-left: 10vw;
   }
 
   .footer-nav{
-    margin-right: 50px;
+    /* margin-right: 50px; */
   }
   
-  .copywrite-text {
+  /* .copywrite-text {
     padding: 16px;
   
- }
+ } */

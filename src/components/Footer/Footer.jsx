@@ -9,25 +9,23 @@ function Footer() {
     return (
 
 
-        <div className="footer">
-            <div className='footer-text d-flex space-between'>
+        <div className="footer ">
+            <div className='footer-text d-flex ml-5'>
                 <div className='footer-icons'>
-                    <ul classname='footer-menu'>
-                        <li><Link to="#"><FaFacebook /></Link></li>
-                        <li><Link to="#"><FaInstagram /></Link></li>
-                        <li><Link to="#"><FaTwitter /></Link></li>
-                    </ul>
+                
+                        <span className="p-2"><Link to="#"><FaFacebook/></Link></span>
+                        <span className="p-2"><Link to="#"><FaInstagram /></Link></span>
+                        <span className="p-2"><Link to="#"><FaTwitter/></Link></span>
+                
+                </div>
+                <div className='footer-nav mr-5'>
+                    
+                        <span className="p-2"><Link to="#Volunteer">VOLUNTEER</Link></span>
+                        <span className="p-2"><Link to="#Locations">LOCATIONS</Link></span>
+                        <span className="p-2"><Link to="#Contact">CONTACT US</Link></span>
 
                 </div>
-                <div className='footer-nav'>
-                    <ul classname='footer-menu'>
-                        <li><Link to="#Volunteer">VOLUNTEER</Link></li>
-                        <li><Link to="#Locations">LOCATIONS</Link></li>
-                        <li><Link to="#Contact">CONTACT US</Link></li>
-
-                    </ul>
-                </div>
-                <div className='copywrite-text'>@ Copywrite 2022. All Rights Reserved. Powered by GA Team 2</div>
+                <div className='text-end'>@ Copyright 2022. All Rights Reserved. Powered by GA Team 2</div>
             </div>
         </div>
 

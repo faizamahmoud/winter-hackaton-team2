@@ -8,6 +8,10 @@ import Search from './components/Search';
 
 function App() {
   return (
+
+
+        
+
     <div className="App">   
       {/* <Map />       */}
       <Routes>
@@ -16,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<AnimalShelters />} />
         <Route path="/searchResults" element={<SearchResult />} />  
+
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
     </div>

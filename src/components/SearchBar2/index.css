@@ -1,0 +1,14 @@
+#bold-text{
+    font-weight: bold;
+}
+
+.outset-border {
+    border-style: outset;
+}
+.text-above-search-2{
+    font-weight: bold;
+    /* position: relative;
+    z-index: 1;
+    padding: 0 5px;
+    display: inline-block; */
+}

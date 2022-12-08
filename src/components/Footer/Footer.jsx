@@ -10,6 +10,7 @@ function Footer() {
 
 
         <div className="footer">
+            <div className='footer-text d-flex space-between'>
             <div className='footer-icons'>
                 <ul>
                     <li><Link to="#"><FaFacebook/></Link></li>
@@ -26,7 +27,8 @@ function Footer() {
 
                 </ul>
             </div>
-            <span>@ Copywrite 2022. All Rights Reserved. Powered by GA Team 2</span>
+            <div className='copywrite-text'>@ Copywrite 2022. All Rights Reserved. Powered by GA Team 2</div>
+            </div>
         </div>
 
     );

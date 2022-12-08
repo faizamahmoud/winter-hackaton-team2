@@ -55,7 +55,7 @@ function Map() {
   return (
     <div>
         {/* Gives the map with the inital coordinates */}
-        <div ref={mapContainer} className="map-container" />
+        <div ref={mapContainer} className="map-container mt-5" />
     </div>
   )
 }

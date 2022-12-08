@@ -3,9 +3,12 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import { BsFillTelephoneFill, BsArrowRightCircle } from 'react-icons/bs';
+import SearchBar2 from '../components/SearchBar2/SearchBar2'
 
 function GridComplexExample() {
   return (
+    <>
+    <SearchBar2 />
     <Form className='m-5'>
       <Row className="mb-3">
         <Form.Group as={Col} controlId="formGridEmail">
@@ -67,6 +70,8 @@ function GridComplexExample() {
 
 <button className='btn-donate ms-3 mt-4'><span id='donate-icon'></span>Submit <BsArrowRightCircle /></button>
     </Form>
+
+    </>
 
 );
 }

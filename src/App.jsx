@@ -13,10 +13,9 @@ function App() {
 
     <div className="App">   
       {/* <Map />       */}
-      <Routes>
-        <Route path="/Home" element={<LandingPage />} />
       <Search />      
       <Routes>
+        <Route path="/Home" element={<LandingPage />} />
         <Route path="/" element={<AnimalShelters />} />
         <Route path="/searchResults" element={<SearchResult />} />  
 

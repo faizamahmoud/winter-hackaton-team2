@@ -1,11 +1,13 @@
 import RescueGroups from '../apis/RescueGroups'
 import { useState, useEffect } from 'react'
 import { useGlobalContext } from '../context/shelterContext'
+import {Link} from 'react-router-dom'
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import searchPage1 from '../pages/searchPage1.png'
 import searchPage2 from '../pages/searchPage2.png'
 import searchPage3 from '../pages/searchPage3.png'
+
 
 function AnimalShelters() {
 
@@ -22,7 +24,7 @@ if(!rescueGroupData) {
 } else {  
     return (
         <div>
-          {rescueGroupData.map((singleGroup) => {
+          {rescueGroupData.map((singleGroup,index) => {
             return (
               <Card className="margin-top-50px col-2">
                 <Card.Img variant="top" src={searchPage1} />
@@ -51,11 +53,16 @@ if(!rescueGroupData) {
                 <p>City: {singleGroup.attributes.citystate}</p> 
                 <p>Distance (from 90210 hardcoded): {singleGroup.attributes.distance} miles</p> 
                 <p>Email: {singleGroup.attributes.email}</p> 
-                <p>Phone: <a href={singleGroup.attributes.url} target="_blank">{singleGroup.attributes.url}</a></p> 
-                <p>Website: {singleGroup.attributes.phone}</p> 
+                <p>Phone: {singleGroup.attributes.phone}</p> 
+                <p>Website:<a href={singleGroup.attributes.url} target="_blank">{singleGroup.attributes.url}</a> </p>
 
                 <p>Services: {singleGroup.attributes.phone}</p> 
-                <button>{singleGroup.attributes.coordinates}</button>
+
+                <Link to={`/show/${index}`}>
+                  <div>Change ME!!</div>
+                </Link>
+
+                
                 <button >FLY</button>
 
               </div>

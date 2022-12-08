@@ -1,23 +1,22 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import AnimalShelters from './AnimalShelters';
-
+import Map from './apis/Map';
 import LandingPage from './pages/landingPage';
-
+import AnimalShelters from './components/AnimalShelters';
 import SearchResult from './pages/SearchResult';
-
-import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Navbar/Navbar';
+import Search from './components/Search';
 
 
 function App() {
   return (
     <div className="App">   
-<Navbar/>
-      <Map />
-      <Search />      
-
+      {/* <Map />       */}
       <Routes>
+        <Route path="/Home" element={<LandingPage />} />
+      
+      
         <Route path="/" element={<AnimalShelters />} />
+        <Route path="/searchResults" element={<SearchResult />} />  
+
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
     </div>

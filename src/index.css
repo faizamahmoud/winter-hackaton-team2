@@ -1,4 +1,5 @@
 .map-container {
+<<<<<<< HEAD
     height: 400px;
   }
   
@@ -15,3 +16,16 @@
     margin: 12px;
     border-radius: 4px;
     }
+=======
+  
+    height: 400px;
+    align-items: right;
+    width: 500px;
+    
+  }
+
+  .searchresult{
+    display: flex;
+    flex-direction: row;
+  }  
+>>>>>>> 4b928e6b5501e1d63a37de251c55e150f539aab2

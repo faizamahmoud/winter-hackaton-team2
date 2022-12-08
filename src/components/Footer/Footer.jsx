@@ -25,7 +25,7 @@ function Footer() {
                         <span className="p-2"><Link to="#Contact">CONTACT US</Link></span>
 
                 </div>
-                <div className='text-end'>@ Copywrongy 2022. All Rights Reserved. Powered by GA Team 2</div>
+                <div className='text-end'>@ Copyright 2022. All Rights Reserved. Powered by GA Team 2</div>
             </div>
         </div>
 

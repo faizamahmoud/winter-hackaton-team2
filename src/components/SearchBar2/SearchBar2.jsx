@@ -15,8 +15,8 @@ function SearchBar2() {
                 <h1>Begin your search today!</h1>
 
             </div>
-            <form className='px-5 py-5' action="" method="GET">
-                <input type="text" name="text" class="search" placeholder="Search by zip code" value={postalCode} onChange={(e) => setPostalCode(e.target.value)}/>
+            <form className='px-5 py-5' method="GET">
+                <input type="text" name="text" className="search" placeholder="Search by zip code" value={postalCode} onChange={(e) => setPostalCode(e.target.value)}/>
                 <button disabled><FaSearch /></button>
             </form>
             

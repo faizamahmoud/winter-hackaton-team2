@@ -10,8 +10,10 @@ function Navbar() {
         <div className="container-fluid col-12 navbar navbar-expand-lg sticky-top topnav" id="myTopnav">
                <nav className='container-fluid col-10 d-flex align-items-center justify-content-between'>
                 <div className='left-nav col-3'>
+
                     <span><Link to="/"><img className='logo' src={navlogo} alt='lean-on-me'></img></Link></span>
                     <span className='nav-title mt-2'><Link to="/">LEAN ON ME</Link></span>
+
                 </div>
                
                 <div className='nav-links col-8'>

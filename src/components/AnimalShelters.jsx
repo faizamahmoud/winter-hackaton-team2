@@ -27,7 +27,7 @@ if(!rescueGroupData) {
         <div>
           {rescueGroupData.map((singleGroup,index) => {
             return (
-              <Card className="margin-top-50px col-6">
+              <Card key={`${index}`} className="margin-top-50px col-6">
                 <Card.Img variant="top" src={searchPage1} />
                 <Card.Body>
                   <Card.Title className="sr-card-title">{singleGroup.attributes.name}</Card.Title>                  
@@ -36,13 +36,16 @@ if(!rescueGroupData) {
                     </Card.Text> 
                 </Card.Body>
                 <ListGroup className="sr-small-info">
-                  <ListGroup.Item className="sr-card-link" href="#">{singleGroup.attributes.phone}</ListGroup.Item>
-                  <ListGroup.Item className="sr-card-link" href={singleGroup.attributes.url} target="_blank" >website</ListGroup.Item>
+                  <p>{singleGroup.attributes.phone}</p>
+                  <hr />
+                  <a className="sr-card-link" href={singleGroup.attributes.url} target="_blank" >{singleGroup.attributes.url}</a>
+                  <hr /> 
                   {(singleGroup.attributes.email) ? <>
-                    <ListGroup.Item className="sr-card-link" href='#'>{singleGroup.attributes.email}</ListGroup.Item> 
+                    <p className="sr-card-link" href='#'>{singleGroup.attributes.email}</p> 
                   </>                  
                   : <></>
-                  } 
+                  }
+                  
                   <ListGroup.Item className="sr-card-address" >{singleGroup.attributes.street}, {singleGroup.attributes.citystate}</ListGroup.Item>
                 </ListGroup>
                 <Link to={`/show/${index}`}>

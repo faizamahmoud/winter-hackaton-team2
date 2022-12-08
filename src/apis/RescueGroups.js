@@ -9,22 +9,3 @@ export default axios.create({
         "Authorization": TOKEN,
     },
 })
-
-// This is only needed for axios, which hasn't been working the way it should
-      // try {
-      //   const response = await RescueGroups.get('/public/orgs/search/', {
-      //     method: "post",  
-      //     body: JSON.stringify({
-      //       data: {
-      //         filterRadius: {
-      //           miles: 25,
-      //           postalcode: 90210
-      //         }           
-      //       }
-      //     })     
-      //   })
-      //   if(isMounted) {
-      //     setRescueGroupData(response.data.data)
-      //   }
-      //   console.log(response.data.data)
-      // }

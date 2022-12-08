@@ -1,0 +1,31 @@
+/* SR = SearchResult, so it doesn't accidentally mess up any other commonly used CCS classes */
+
+
+.sr-card-title {
+    font-family: 'Open Sans', sans-serif;
+}
+.margin-top-50px {
+    margin-top: 50px;
+}
+
+.map-container {
+    height: 400px;
+    max-width: 400px;
+  }
+
+.sr-card-title {
+    font-size: 14px;
+    font-weight: bold !important;
+  }
+
+.sr-card-link {
+    text-decoration: none !important;
+    color: inherit;
+    font-size: 11px;
+    font-weight: light;
+}
+
+.sr-card-address {
+    font-size: 12px;
+}
+  

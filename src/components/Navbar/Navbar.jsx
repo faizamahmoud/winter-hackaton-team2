@@ -11,7 +11,7 @@ function Navbar() {
                <nav className='container-fluid col-10 d-flex align-items-center justify-content-between'>
                 <div className='left-nav col-3'>
                     <span><img className='logo' src={navlogo} alt='lean-on-me'></img></span>
-                    <span className='nav-title mt-2'><bold>LEAN ON ME</bold></span>
+                    <span className='nav-title mt-2'>LEAN ON ME</span>
                 </div>
                
                 <div className='nav-links col-8'>

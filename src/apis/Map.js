@@ -4,15 +4,13 @@ import mapboxgl from 'mapbox-gl';
 import markers from './marker.json'
 import { useGlobalContext } from '../context/shelterContext'
 
-
 const T = process.env.REACT_APP_TOKEN
 mapboxgl.accessToken=T
 
 // const {coords} = useGlobalContext()
 // console.log(coords)
 function Map() {
-
-    // const {flyThis} = useGlobalContext()
+// const {flyThis} = useGlobalContext()
 
 
   const {coords} = useGlobalContext()

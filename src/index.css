@@ -14,5 +14,9 @@
 
   .volunteer{
     padding: 0;
-    
+
+  }
+
+  .carousel {
+    z-index: 5;
   }

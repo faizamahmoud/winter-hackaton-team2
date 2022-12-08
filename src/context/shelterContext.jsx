@@ -19,6 +19,9 @@ export const ShelterProvider = ({children}) => {
   //   essential: true // this animation is considered essential with respect to prefers-reduced-motion
   //   })};
 
+  const onSubmit = () => {
+    
+  }
 
   useEffect(() => {
     async function fetchData() {

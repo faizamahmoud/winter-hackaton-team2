@@ -1,12 +1,36 @@
 
+.App {
+  overflow: scroll;
+  height:800px;
+}
+
+.document-margins {
+  margin: 25px 50px 75px;
+}
 
 .map-container {
-      height: 400px;
-    align-items: right;
-    width: 500px;    
-  }
   
+    height: 400px;
+    align-items: right;
+    width: 500px;
+    
+  }
+
   .searchresult{
     display: flex;
     flex-direction: row;
-  }  
+
+  }
+
+  .volunteer{
+    padding: 0;
+
+  }
+
+  .carousel {
+    z-index: 5;
+  }
+
+  .form {
+    background-color: rgba(0,0,0,0.5);
+  }

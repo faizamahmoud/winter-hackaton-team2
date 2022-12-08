@@ -1,11 +1,11 @@
-.map-container {
-  
-    height: 400px;
-    align-items: right;
-    width: 500px;
-    
-  }
 
+
+.map-container {
+      height: 400px;
+    align-items: right;
+    width: 500px;    
+  }
+  
   .searchresult{
     display: flex;
     flex-direction: row;

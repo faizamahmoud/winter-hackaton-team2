@@ -8,15 +8,12 @@ import { BiEnvelope } from "react-icons/bi";
 import { CgWebsite } from "react-icons/cg";
 import Carousel from 'react-bootstrap/Carousel';
 
-
-
 function ShowPage() {
 
     const {rescueGroupData} = useGlobalContext()
     const {id} =useParams()
     const theShelter = rescueGroupData[id].attributes
     console.log(theShelter)
-
     
   return (
     <div className="d-flex flex-row bd-highlight mb-3">

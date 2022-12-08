@@ -25,21 +25,23 @@ const LandingPage = () => {
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div className='row'>
-                                <ul class="list-unstyled">
-                                <div className='volunteer-title'><h1>Animal Volunteering Reimagined</h1>
-                                <div className='blockquote'>Our primary goal is to keep people and pets together. We are bringing animal welfare organizations and community members together to engage in partnerships that support the bond of people and animals.</div>
-                                </div>
-                                </ul>
-                                <form className='px-5 py-5' onSubmit={handleSubmit}>
+                                <div className="text-wrap">
+                                <h1 className="responsive-font-example">Animal Volunteering Reimagined</h1>
+                                <div className='col-4'>
+                                <span className="responsive-font-example1">Our primary goal is to keep people and pets together. We are bringing animal welfare organizations and community members together to engage in partnerships that support the bond of people and animals.</span>
+                                <span><form className='px-3 py-3 responsive-font-example1' onSubmit={handleSubmit}>
                                     <input type="text" name="text" class="search" placeholder="Search by zip code" value={postalCode} onChange={(e) => setPostalCode(e.target.value)}/>
                                     <button type="submit">Search</button>
-                                </form>
+                                </form></span>
+                                </div>
+                                </div>                               
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section className='bgimage2'></section>
+            <section className='bgimage2 '></section>
+            
         </>
 
 

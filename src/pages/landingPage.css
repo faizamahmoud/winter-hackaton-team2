@@ -1,23 +1,97 @@
-.bgimage {
+/* .bgimage {
     width:100%;
     height:475px;
     background-image: url('../images/Hero_Landing_\ Page.png');
     background-repeat: no-repeat;
     background-size: 100%;
     background-attachment:local;
-  }
-.bgimage2 {
+  } */
+/* .bgimage2 {
     width:100%;
     height:484px;
     background-image: url('../images/Testimonial_Landing_Page.png');
     background-repeat: no-repeat;
     background-size: 100%;
     background-attachment:local;
-  }
+  } */
   .bgimage h5 {
     color:white;
     text-shadow:2px 2px #333;
   }
+
+
+  /* If the screen size is 1200px wide or more, set the font-size to 20px */
+@media (min-width: 1200px) {
+    .responsive-font-example1 {
+      font-size: 20px;
+    }
+  }
+  /* If the screen size is smaller than 1200px, set the font-size to 15px */
+  @media (max-width: 1199.98px) {
+    .responsive-font-example1 {
+      font-size: 10px;
+    }
+  }
+
+    /* If the screen size is 1200px wide or more, set the font-size to 40px */
+@media (min-width: 1200px) {
+    .responsive-font-example {
+      font-size: 40px;
+    }
+  }
+  /* If the screen size is smaller than 1200px, set the font-size to 30px */
+  @media (max-width: 1199.98px) {
+    .responsive-font-example {
+      font-size: 20px;
+    }
+  }
+    /* If the screen size is 1200px wide or more, set the font-size to 40px */
+@media (min-width: 1200px) {
+    .bgimage {
+        width:100%;
+        height:475px;
+        background-image: url('../images/Hero_Landing_\ Page.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-attachment:local;
+    }
+  }
+  /* If the screen size is smaller than 1200px, set the font-size to 30px */
+  @media (max-width: 1199.98px) {
+    .bgimage {
+        width:100%;
+        height:475px;
+        background-image: url('../images/Hero_Landing_\ Page.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-attachment:local;
+    }
+  }
+@media (min-width: 1200px) {
+    .bgimage2 {
+        width:100%;
+        height:600px;
+        background-image: url('../images/Testimonial_Landing_Page.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-attachment:local;
+    }
+  }
+  /* If the screen size is smaller than 1200px, set the font-size to 30px */
+  @media (max-width: 1199.98px) {
+    .bgimage2 {
+        width:100%;
+        height:600px;
+        background-image: url('../images/Testimonial_Landing_Page.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-attachment:local;
+    }
+  }
+
+
+
+ 
 .volunteer-title{
   width:466px;
   
@@ -27,3 +101,4 @@
 div.break {
   word-wrap: break-word;
 }
+

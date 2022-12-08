@@ -35,8 +35,3 @@ function Footer() {
 export default Footer;
 
 
-
-
-// Notes
-//! footer-nav links correct
-//*npm install react-icons --save

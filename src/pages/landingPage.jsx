@@ -16,8 +16,8 @@ const LandingPage = () => {
         } else {
             navigate('/searchResults')
         }
-
     }
+    
     return (
         <>
             <section class="bgimage  px-4 py-5 img-fluid ">

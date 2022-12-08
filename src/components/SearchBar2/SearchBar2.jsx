@@ -1,14 +1,13 @@
 import React from 'react';
 import './index.css'
-import { AddressAutofill } from "@mapbox/search-js-react";
 import { useGlobalContext } from '../../context/shelterContext'
+import {FaSearch} from 'react-icons/fa'
 
 import { RiArrowDropDownLine } from "react-icons/ri";
 function SearchBar2() {
 
-
+    const {postalCode, setPostalCode} = useGlobalContext()
     
-
     return (
         <div className='search2-container mx-5 mt-5'>
             <div className='text-above-search-2'>
@@ -17,8 +16,8 @@ function SearchBar2() {
 
             </div>
             <form className='px-5 py-5' action="" method="GET">
-                <input type="text" name="text" class="search" placeholder="Search by zip code" />
-                <input type="submit" name="submit" class="submit" value="Search" />
+                <input type="text" name="text" class="search" placeholder="Search by zip code" value={postalCode} onChange={(e) => setPostalCode(e.target.value)}/>
+                <button disabled><FaSearch /></button>
             </form>
             
         

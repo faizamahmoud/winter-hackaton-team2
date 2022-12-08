@@ -19,6 +19,7 @@
     text-shadow:2px 2px #333;
   }
 
+
   /* If the screen size is 1200px wide or more, set the font-size to 20px */
 @media (min-width: 1200px) {
     .responsive-font-example1 {
@@ -90,4 +91,14 @@
 
 
 
+ 
+.volunteer-title{
+  width:466px;
   
+}
+
+ 
+div.break {
+  word-wrap: break-word;
+}
+

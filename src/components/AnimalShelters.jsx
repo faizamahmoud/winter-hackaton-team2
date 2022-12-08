@@ -7,6 +7,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import searchPage1 from '../pages/searchPage1.png'
 import searchPage2 from '../pages/searchPage2.png'
 import searchPage3 from '../pages/searchPage3.png'
+import { BsArrowRightCircle } from 'react-icons/bs';
 
 
 function AnimalShelters() {
@@ -45,7 +46,7 @@ if(!rescueGroupData) {
                   <ListGroup.Item className="sr-card-address" >{singleGroup.attributes.street}, {singleGroup.attributes.citystate}</ListGroup.Item>
                 </ListGroup>
                 <Link to={`/show/${index}`}>
-                  <div>Change ME!!</div>
+                <button className='btn-donate ms-3 mt-1'><span id='donate-icon'></span>Learn More <BsArrowRightCircle /></button>
                 </Link>
               </Card>
           )})}

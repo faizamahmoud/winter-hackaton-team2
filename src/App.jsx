@@ -1,16 +1,16 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AnimalShelters from './AnimalShelters';
 import Map from './apis/Map';
-import Search from './components/Search';
+import LandingPage from './pages/landingPage';
 
 function App() {
   return (
     <div className="App">   
-      <Map />
-      <Search />      
+      {/* <Map />       */}
 
       <Routes>
         <Route path="/" element={<AnimalShelters />} />
+        <Route path="/Home" element={<LandingPage />} />
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
     </div>

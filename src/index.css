@@ -1,12 +1,18 @@
-
-
 .map-container {
-      height: 400px;
-    align-items: right;
-    width: 500px;    
-  }
   
+    height: 400px;
+    align-items: right;
+    width: 500px;
+    
+  }
+
   .searchresult{
     display: flex;
     flex-direction: row;
-  }  
+
+  }
+
+  .volunteer{
+    padding: 0;
+    
+  }

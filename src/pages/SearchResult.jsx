@@ -9,9 +9,9 @@ const SearchResult = () => {
             {/* <Header /> */}
             <Search />
             <SearchBar2 />
-                <div className="row">
-                    <Map className="col"/>
-                    <AnimalShelters className="col"/>
+                <div className="d-flex flex-row mb-3">
+                    <AnimalShelters className="p-1"/>
+                    <Map className="p-1"/>
                 </div>
 
             {/* <Footer /> */}

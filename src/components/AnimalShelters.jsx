@@ -27,7 +27,7 @@ if(!rescueGroupData) {
         <div>
           {rescueGroupData.map((singleGroup,index) => {
             return (
-              <Card className="margin-top-50px col-2">
+              <Card className="margin-top-50px col-6">
                 <Card.Img variant="top" src={searchPage1} />
                 <Card.Body>
                   <Card.Title className="sr-card-title">{singleGroup.attributes.name}</Card.Title>                  

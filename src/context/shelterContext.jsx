@@ -11,15 +11,20 @@ export const ShelterProvider = ({children}) => {
 const [item, setItems] = useState([]);
 const [rescueGroupData, setRescueGroupData] = useState()
 
+
 // function flyThis () {map.flyTo({
 //   center: [(Math.random() - 0.5) * 360, (Math.random() - 0.5) * 100],
 //   essential: true // this animation is considered essential with respect to prefers-reduced-motion
 //   })};
 
+
+useEffect(() => {
+     async function fetchData() {
+
 const [postalCode, setPostalCode] = useState()
 const [distance, setDistance] = useState('25')
 const [coords, setCoords] = useState([])
-
+ 
   useEffect(() => {
     async function fetchData() {
 
@@ -52,12 +57,16 @@ const [coords, setCoords] = useState([])
   }, [postalCode, distance])
 
 
+
+
+  }, [])
+
   // This useEffect will take the lat and lon from the rescueGroupData, if it exists, and set the coords array to objects with the lat and lon of each shelter.
   // This info will be used with the map, to provide markers for the user
   useEffect(()=> {
     if(rescueGroupData) {      
       setCoords([]) 
-      rescueGroupData.map((item) => {setCoords((prevState) => [...prevState, {'name': item.attributes.name, 'lat': item.attributes.lat, 'lon': item.attributes.lon}])})
+      rescueGroupData.map((item) => {setCoords((prevState) => [...prevState, {"name": item.attributes.name, "lat": item.attributes.lat, "lng": item.attributes.lon,"url":item.attributes.url}])})
     }
   }, [rescueGroupData])
 

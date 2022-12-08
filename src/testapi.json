@@ -1,0 +1,21 @@
+[
+    {
+        "city": "Woodland Hills",
+        "citystate": "Woodland Hills, CA",
+        "coordinates": "34.1684, -118.605",
+        "country": "United States",
+        "distance": 11.71,
+        "email": "rescuemeincorporated@yahoo.com",
+        "isCommonapplicationAccepted": false,
+        "lat": 34.168399810791016,
+        "lon": -118.6050033569336,
+        "name": "Rescue Me Incorporated",
+        "phone": "(818) 999-2400",
+        "postalcode": "91365",
+        "services": "adoptions,rescue,rehabilitation,rehoming,training,spay/neuter referrals,medical referrals",
+        "state": "CA",
+        "street": "P.O. Box 385",
+        "type": "Rescue",
+        "url": "http://www.rescuemeinc.org"
+    }
+]

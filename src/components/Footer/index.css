@@ -1,0 +1,43 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #0AA6A6;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+
+
+}
+ul > li {
+    display: inline-block;
+    /* You can also add some margins here to make it look prettier */
+}
+
+li a {
+    display: block;
+    color: black;
+
+    padding: 16px;
+    text-decoration: none;
+}
+
+
+
+  .footer-icons{
+    margin-left: 500px;
+  }
+
+  .footer-nav{
+    margin-right: 50px;
+  }

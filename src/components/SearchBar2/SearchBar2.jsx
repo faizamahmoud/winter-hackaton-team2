@@ -10,7 +10,7 @@ function SearchBar2() {
     
 
     return (
-        <div className='search2-container'>
+        <div className='search2-container mx-5 mt-5'>
             <div className='text-above-search-2'>
                 <h1>Make animals a part of your future and improve their quality of life. </h1>
                 <h1>Begin your search today!</h1>
@@ -19,8 +19,8 @@ function SearchBar2() {
             <form className='px-5 py-5' action="" method="GET">
                 <input type="text" name="text" class="search" placeholder="Search by zip code" />
                 <input type="submit" name="submit" class="submit" value="Search" />
-                
             </form>
+            
         
         <div className='filter-sort-service d-flex col-4 mb-5'>
             <span className='mx-2'>Sort:<span className='mx-1' id="bold-text">Distance<RiArrowDropDownLine /></span></span>

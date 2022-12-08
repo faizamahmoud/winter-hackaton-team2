@@ -32,15 +32,16 @@ if(!rescueGroupData) {
                       Placeholder
                     </Card.Text> 
                 </Card.Body>
-                <ListGroup className="list-group-flush">
-                  <ListGroup.Item>{singleGroup.attributes.adoptionProcess}</ListGroup.Item>
-                  <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-                  <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+                <ListGroup className="sr-small-info">
+                  <ListGroup.Item className="sr-card-link" href="#">{singleGroup.attributes.phone}</ListGroup.Item>
+                  <ListGroup.Item className="sr-card-link" href={singleGroup.attributes.url} target="_blank" >website</ListGroup.Item>
+                  {(singleGroup.attributes.email) ? <>
+                    <ListGroup.Item className="sr-card-link" href='#'>{singleGroup.attributes.email}</ListGroup.Item> 
+                  </>                  
+                  : <></>
+                  } 
+                  <ListGroup.Item className="sr-card-address" >{singleGroup.attributes.street}, {singleGroup.attributes.citystate}</ListGroup.Item>
                 </ListGroup>
-                <Card.Body>
-                  <Card.Link href="#">Card Link</Card.Link>
-                  <Card.Link href="#">Another Link</Card.Link>
-                </Card.Body>
               </Card>
           )})}
           {/* {rescueGroupData.map((singleGroup) => {

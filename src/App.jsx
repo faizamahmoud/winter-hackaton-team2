@@ -5,7 +5,7 @@ import Footer from './components/Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
 import ShowPage from './components/ShowPage';
 import SearchBar2 from './components/SearchBar2/SearchBar2';
-import NotFound from './components/404/404';
+
 
 function App() {
   return (
@@ -17,8 +17,6 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/searchResults" element={<SearchResult />} />
         <Route path="/show/:id" element={<ShowPage />} />
-        
-        {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
       
       <Footer />

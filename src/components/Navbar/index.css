@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
 .navbar {
 
     padding: 1rem;
@@ -51,20 +55,16 @@ li a {
     font-weight: bold;
 }
 
-.logo {
-    padding-right: 2rem;
-    width: 110%;
-}
+
 
 #donate-icon {
     padding: 1px;
-
-    margin-right: 2px;
+    /* margin-right: 2px; */
 }
 
 .nav-links {
     /* position: relative; */
-    flex-direction: row;
+    /* flex-direction: row; */
     /* flex-wrap: wrap; */
     /* align-items: center; */
     /* justify-content: space-between; */

@@ -4,10 +4,9 @@ import SearchResult from './pages/SearchResult';
 import Footer from './components/Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
 import ShowPage from './components/ShowPage';
+import Form from './components/Form'
 import NotFound from './pages/NotFound/NotFound';
 import SearchBar2 from './components/SearchBar2/SearchBar2';
-
-
 
 function App() {
   return (
@@ -19,7 +18,9 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/searchResults" element={<SearchResult />} />
         <Route path="/show/:id" element={<ShowPage />} />
+        <Route path="/form" element={<Form />} />
         <Route path="*" element={<NotFound />} />
+
       </Routes>
       
       <Footer />

@@ -3,7 +3,6 @@ import React, {useRef, useEffect, useState} from 'react';
 import mapboxgl from 'mapbox-gl';
 import { useGlobalContext } from '../context/shelterContext'
 
-
 // Mapbox key
 const T = process.env.REACT_APP_TOKEN
 mapboxgl.accessToken=T
@@ -14,8 +13,6 @@ function Map() {
     const {coords} = useGlobalContext() //??
     const mapContainer = useRef(null);
     const map = useRef(null);
-    // const [lng, setLng] = useState(-122.26);
-    // const [lat, setLat] = useState(37.79);
     const [zoom, setZoom] = useState(5);
 
     useEffect(() => {
@@ -28,15 +25,14 @@ function Map() {
             });
          
             // from Mapbox.com
-      
-        coords.map((marker) => {
-               new mapboxgl.Marker()
-                .setLngLat(marker)
-                .setPopup(new mapboxgl.Popup({offset:50})
-                // looking to populate shelter name in line below
-                .setHTML(`${marker.name}`))
-                .addTo(map)
-            });
+            coords.map((marker) => {
+            new mapboxgl.Marker()
+            .setLngLat(marker)
+            .setPopup(new mapboxgl.Popup({offset:50})
+            // looking to populate shelter name in line below
+            .setHTML(`${marker.name}`))
+            .addTo(map)
+        });
 
             // flyThis()
         }, [coords]);
@@ -58,12 +54,8 @@ function Map() {
    
   return (
     <div>
-
         {/* Gives the map with the inital coordinates */}
         <div ref={mapContainer} className="map-container" />
-
-        {/* not sure if we need the next line, used for showing lat/long on screen */}
-        {/* <div className="sidebar">Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}</div> */}
     </div>
   )
 }

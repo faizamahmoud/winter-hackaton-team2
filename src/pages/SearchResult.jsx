@@ -7,8 +7,10 @@ const SearchResult = () => {
         <div>
             {/* <Header /> */}
             <Search />
-            <Map />
-            <AnimalShelters />
+                <div className="row">
+                    <Map className="col"/>
+                    <AnimalShelters className="col"/>
+                </div>
             {/* <Footer /> */}
 
         </div>

@@ -5,11 +5,10 @@ import Search from './components/Search';
 
 function App() {
   return (
-    <div className="App">   
-  
+    <div className="container">     
       <Routes>
         <Route path="/" element={<AnimalShelters />} />
-        <Route path="/searchResults" element={<SearchResult />} />
+        <Route path="/searchResults" element={<SearchResult className="row"/>} />
         
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>

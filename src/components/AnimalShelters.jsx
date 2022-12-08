@@ -27,14 +27,13 @@ if(!rescueGroupData) {
               <Card className="margin-top-50px col-2">
                 <Card.Img variant="top" src={searchPage1} />
                 <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
-                  </Card.Text>
+                  <Card.Title className="sr-card-title">{singleGroup.attributes.name}</Card.Title>                  
+                    <Card.Text>
+                      Placeholder
+                    </Card.Text> 
                 </Card.Body>
                 <ListGroup className="list-group-flush">
-                  <ListGroup.Item>Cras justo odio</ListGroup.Item>
+                  <ListGroup.Item>{singleGroup.attributes.adoptionProcess}</ListGroup.Item>
                   <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
                   <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
                 </ListGroup>

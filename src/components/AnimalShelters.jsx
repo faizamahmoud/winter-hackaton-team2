@@ -1,6 +1,6 @@
-import RescueGroups from './apis/RescueGroups'
+import RescueGroups from '../apis/RescueGroups'
 import { useState, useEffect } from 'react'
-import { useGlobalContext } from './context/shelterContext'
+import { useGlobalContext } from '../context/shelterContext'
 
 function AnimalShelters() {
 

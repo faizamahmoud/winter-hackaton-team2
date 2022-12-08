@@ -1,6 +1,6 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
+    /* display: flex; */
+    /* justify-content: space-between; */
     /* margin-top: 1rem; */
     padding: 1rem;
     background-color: #0AA6A6;
@@ -13,6 +13,8 @@
 
 .nav-title {
    font-size: 30px;
+   font-weight: bold;
+   margin-bottom: -100px;
 }
 
 ul {
@@ -37,7 +39,7 @@ li a {
 }
 
 .left-nav{
-    /* margin-left:1rem ; */
+    margin-right: auto;
 }
 
 .btn-donate {
@@ -47,9 +49,9 @@ border-radius: 10px;
 height: 40px;
 width: 140px;
 border-radius: 10px;
-padding:-10px;
+/* padding:-10px;
 margin-right:10rem;
-margin-bottom: 1rem;
+margin-bottom: 1rem; */
 
 }
 

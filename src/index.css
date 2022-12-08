@@ -1,7 +1,4 @@
-#root{
-  grid-template-columns: repeat(12, 1fr);
-  
-}
+
 
 .map-container {
     height: 400px;

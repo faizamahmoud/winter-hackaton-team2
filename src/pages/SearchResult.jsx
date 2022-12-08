@@ -4,13 +4,15 @@ import AnimalShelters from "../components/AnimalShelters";
 
 const SearchResult = () => {
     return (
-        <div>
+        <div className="container">
             {/* <Header /> */}
             <Search />
+
                 <div className="row">
                     <Map className="col"/>
                     <AnimalShelters className="col"/>
                 </div>
+
             {/* <Footer /> */}
 
         </div>

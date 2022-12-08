@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+.dog-img {
+    width: 45vw;
+}
+
+h3, h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+h3 {
+    font-size: 3rem !important;
+}
+
+h4 {
+    font-size: 2rem !important;
+}
+
+.go-back-btn {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    background-color: #F28227;
+    border-radius: 10px !important;
+    font-size: 1.5rem !important;
+}
